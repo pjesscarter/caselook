@@ -16,7 +16,7 @@ class CasesSpider(scrapy.Spider):
 
     def __init__(self, *args, **kwargs):
         super(CasesSpider, self).__init__(*args, **kwargs)
-        self.codes = pd.read_csv('../courts_codes.csv')
+        self.codes = pd.read_csv('courts_codes.csv')
         self.start_urls = ["https://caselook.ru/#/search"]
         self.seen_urls = set()
         self.lock = asyncio.Lock()
@@ -113,7 +113,7 @@ class CasesSpider(scrapy.Spider):
                 # {"id":"bf6a1c48-7ce2-49e4-ba73-fc1768a8a4b9","contains":True,"type":"case_type",
                 #  "data":{"id":1}},
                 {"id": "bf6a1c48-7ce2-49e4-ba73-fc1768a8a4b9", "contains": True, "type": "case_type",
-                 "data": {"id": 3}}
+                 "data": {"id": 1}}
             ]
         }
 
